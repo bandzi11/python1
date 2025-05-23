@@ -24,6 +24,7 @@ def heron(a: float, b: float, c: float) -> float:
 
 def wspolne(x: list, y: list) -> list:
     """
+    https://stackoverflow.com/questions/44012479/intersection-of-two-counters
      Znajduje część wspólną dwóch list, uwzględniając liczbę wystąpień.
      Parameters:
      x (list): pierwsza lista
@@ -44,6 +45,7 @@ def wspolne(x: list, y: list) -> list:
 
 def podzbiory(x: set) -> list:
     """
+    https://www.geeksforgeeks.org/python-program-to-get-all-subsets-of-given-size-of-a-set/
     Generuje wszystkie podzbiory danego zbioru.
     Parameters:
     x (set): zbiór wejściowy
@@ -79,6 +81,7 @@ def fibonacci_iteracja(n: int) -> list:
 
 def fibonacci_rekurencja(n: int) -> list:
     """
+    https://stackoverflow.com/questions/29570870/memoization-fibonacci-algorithm-in-python
     Generuje ciąg Fibonacciego metodą rekurencyjną z memoizacją.
     Parameters:
     n (int): liczba elementów ciągu
@@ -141,9 +144,9 @@ def transkrybuj(dna: str) -> str:
     Throws: ValueError jeśli sekwencja zawiera niedozwolone znaki
     """
     trans = {'T': 'A', 'A': 'U', 'C': 'G', 'G': 'C'}
-    if not all(ch in trans for ch in dna):
+    if not all(i in trans for i in dna):
         raise ValueError("Sekwencja DNA musi składać się z dozwolonych znaków -> ATCG")
-    return ''.join(trans[ch] for ch in dna)
+    return ''.join(trans[i] for i in dna)
 
 
 if __name__ == "__main__":
